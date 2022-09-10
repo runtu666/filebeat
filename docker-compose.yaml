@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  filebeat:
+    restart: always
+    hostname: brush
+    build: .
+    volumes:
+      - {$yourLogPath}:/usr/share/filebeat/docker/logs/
